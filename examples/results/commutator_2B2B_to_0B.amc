@@ -1,0 +1,17 @@
+declare G{mode= (2,2),latex ="G" } 
+declare H{mode= (2,2),latex ="H" } 
+declare R0{mode= (0,0),latex ="R" } 
+declare lambda2B{mode= (2,2),latex ="\lambda" } 
+declare lambda3B{mode= (3,3),latex ="\lambda" } 
+declare n {  mode=2, diagonal=true, latex="n"} 
+ 
+# commutator [2B,2B]-0B 
+# lambda_1B
+R0 = 1/16*sum_abcd(4*(-n_a*n_b*n_c-n_a*n_b*n_d+n_a*n_b+n_a*n_c*n_d+n_b*n_c*n_d-n_c*n_d)*G_abcd*H_cdab);
+ 
+# lambda_2B
+R0 = 1/16*sum_abcdef(2*(8*(n_e-n_f)*G_aecf*H_bfde-(n_e+n_f-1)*G_abef*H_efcd+(n_e+n_f-1)*G_efcd*H_abef)*lambda2B_abcd);
+ 
+# lambda_3B
+R0 = 1/16*sum_abcdefg(4*(-G_abdg*H_cgef+G_agde*H_bcfg)*lambda3B_abcdef);
+ 

@@ -1,0 +1,35 @@
+declare G{mode= (2,2),latex ="G" } 
+declare H{mode= (2,2),latex ="H" } 
+declare R0{mode= (0,0),latex ="R" } 
+declare R1{mode= (1,1),latex ="R" } 
+declare R2{mode= (2,2),latex ="R" } 
+declare R3{mode= (3,3),latex ="R" } 
+declare lambda2B{mode= (2,2),latex ="\lambda" } 
+declare lambda3B{mode= (3,3),latex ="\lambda" } 
+declare n {  mode=2, diagonal=true, latex="n"} 
+ 
+# commutator [2B,2B]-0B 
+# lambda_1B
+R0 = 1/16*sum_abcd(4*(-n_a*n_b*n_c-n_a*n_b*n_d+n_a*n_b+n_a*n_c*n_d+n_b*n_c*n_d-n_c*n_d)*G_abcd*H_cdab);
+ 
+# lambda_2B
+R0 = 1/16*sum_abcdef(2*(8*(n_e-n_f)*G_aecf*H_bfde-(n_e+n_f-1)*G_abef*H_efcd+(n_e+n_f-1)*G_efcd*H_abef)*lambda2B_abcd);
+ 
+# lambda_3B
+R0 = 1/16*sum_abcdefg(4*(-G_abdg*H_cgef+G_agde*H_bcfg)*lambda3B_abcdef);
+ 
+# commutator [2B,2B]-1B 
+# lambda_1B
+R1_ab = 1/16*sum_cde(-8*(n_c*n_d-n_c*n_e-n_d*n_e+n_e)*G_cdbe*H_aecd-8*(n_c*n_d+n_c*n_e-n_c-n_d*n_e)*G_acde*H_debc);
+ 
+# lambda_2B
+R1_ab = 1/16*sum_cdefg(4*(-2*G_acbg*H_dgef+4*G_aceg*H_dgbf+2*G_agbe*H_cdfg+G_agef*H_cdbg-G_cdbg*H_agef+2*G_cdeg*H_agbf-4*G_cgbe*H_adfg-2*G_cgef*H_adbg)*lambda2B_cdef);
+ 
+# commutator [2B,2B]-2B 
+# lambda_1B
+R2_abcd = 1/4*sum_ef(16*(n_e-n_f)*G_aecf*H_bfde-2*(n_e+n_f-1)*G_abef*H_efcd+2*(n_e+n_f-1)*G_efcd*H_abef);
+ 
+# commutator [2B,2B]-3B 
+# lambda_1B
+R3_abcdef = 9/4*sum_g(-4*G_abdg*H_cgef+4*G_agde*H_bcfg);
+ 

@@ -1,0 +1,68 @@
+declare G{mode= (3,3),latex ="G" } 
+declare H{mode= (3,3),latex ="H" } 
+declare R0{mode= (0,0),latex ="R" } 
+declare R1{mode= (1,1),latex ="R" } 
+declare R2{mode= (2,2),latex ="R" } 
+declare R3{mode= (3,3),latex ="R" } 
+declare R4{mode= (4,4),latex ="R" } 
+declare R5{mode= (5,5),latex ="R" } 
+declare lambda2B{mode= (2,2),latex ="\lambda" } 
+declare lambda3B{mode= (3,3),latex ="\lambda" } 
+declare lambda4B{mode= (4,4),latex ="\lambda" } 
+declare lambda5B{mode= (5,5),latex ="\lambda" } 
+declare n {  mode=2, diagonal=true, latex="n"} 
+ 
+# commutator [3B,3B]-0B 
+# lambda_1B
+R0 = 1/1296*sum_abcdef(36*(n_a*n_b*n_c*n_d*n_e+n_a*n_b*n_c*n_d*n_f-n_a*n_b*n_c*n_d+n_a*n_b*n_c*n_e*n_f-n_a*n_b*n_c*n_e-n_a*n_b*n_c*n_f+n_a*n_b*n_c-n_a*n_b*n_d*n_e*n_f-n_a*n_c*n_d*n_e*n_f+n_a*n_d*n_e*n_f-n_b*n_c*n_d*n_e*n_f+n_b*n_d*n_e*n_f+n_c*n_d*n_e*n_f-n_d*n_e*n_f)*G_abcdef*H_defabc);
+ 
+# lambda_2B
+R0 = 1/1296*sum_abcdefghijk(9*(-36*(n_i-n_j)*G_abicgj*H_efjdhi*lambda2B_efgh+9*(n_i-n_j)*G_abighj*H_efjcdi*lambda2B_efgh-18*(n_i-n_j)*G_aeicdj*H_bfjghi*lambda2B_efgh+72*(n_i-n_j)*G_aeicgj*H_bfjdhi*lambda2B_efgh-18*(n_i-n_j)*G_aeighj*H_bfjcdi*lambda2B_efgh-12*(n_i+n_j-1)*G_abecij*H_fijdgh*lambda2B_efgh-12*(n_i+n_j-1)*G_abegij*H_fijcdh*lambda2B_efgh-6*(n_i+n_j-1)*G_aefcij*H_bijdgh*lambda2B_efgh-6*(n_i+n_j-1)*G_aefgij*H_bijcdh*lambda2B_efgh+18*(n_i+n_j-1)*G_aijcdg*H_befhij*lambda2B_efgh+18*(n_i+n_j-1)*G_aijcgh*H_befdij*lambda2B_efgh-36*(n_e*n_f*n_g+n_e*n_f*n_h-n_e*n_f-n_e*n_g*n_h-n_f*n_g*n_h+n_g*n_h)*G_aefcgh*H_bghdef+6*(n_e*n_f*n_g-n_e*n_f*n_h-n_e*n_g*n_h+n_e*n_h-n_f*n_g*n_h+n_f*n_h+n_g*n_h-n_h)*G_efgcdh*H_abhefg+6*(n_e*n_f*n_g+n_e*n_f*n_h-n_e*n_f+n_e*n_g*n_h-n_e*n_g-n_e*n_h+n_e-n_f*n_g*n_h)*G_abefgh*H_fghcde-18*G_abechk*H_fgkdij*lambda2B_efghij+9*G_abehik*H_fgkcdj*lambda2B_efghij-6*G_abkchi*H_efgdjk*lambda2B_efghij-G_abkhij*H_efgcdk*lambda2B_efghij+6*G_aefcdk*H_bgkhij*lambda2B_efghij-36*G_aefchk*H_bgkdij*lambda2B_efghij+18*G_aefhik*H_bgkcdj*lambda2B_efghij+18*G_aekcdh*H_bfgijk*lambda2B_efghij+36*G_aekchi*H_bfgdjk*lambda2B_efghij+6*G_aekhij*H_bfgcdk*lambda2B_efghij+G_efgcdk*H_abkhij*lambda2B_efghij-6*G_efgchk*H_abkdij*lambda2B_efghij-9*G_efkcdh*H_abgijk*lambda2B_efghij-18*G_efkchi*H_abgdjk*lambda2B_efghij)*lambda2B_abcd);
+ 
+# lambda_3B
+R0 = 1/1296*sum_abcdefghi(6*(27*(n_g*n_h-n_g*n_i-n_h*n_i+n_i)*G_aghdei*H_bcifgh+27*(n_g*n_h+n_g*n_i-n_g-n_h*n_i)*G_abgdhi*H_chiefg+(n_g*n_h+n_g*n_i-n_g+n_h*n_i-n_h-n_i+1)*G_abcghi*H_ghidef-(n_g*n_h+n_g*n_i-n_g+n_h*n_i-n_h-n_i+1)*G_ghidef*H_abcghi)*lambda3B_abcdef);
+ 
+# lambda_4B
+R0 = 1/1296*sum_abcdefghij(9*(9*(n_i-n_j)*G_abiefj*H_cdjghi-2*(n_i+n_j-1)*G_abceij*H_dijfgh+2*(n_i+n_j-1)*G_aijefg*H_bcdhij)*lambda4B_abcdefgh);
+ 
+# lambda_5B
+R0 = 1/1296*sum_abcdefghijk(9*(G_abcfgk*H_dekhij-G_abkfgh*H_cdeijk)*lambda5B_abcdefghij);
+ 
+# commutator [3B,3B]-1B 
+# lambda_1B
+R1_ab = 1/1296*sum_cdefg(108*(n_c*n_d*n_e*n_f+n_c*n_d*n_e*n_g-n_c*n_d*n_e-n_c*n_d*n_f*n_g-n_c*n_e*n_f*n_g+n_c*n_f*n_g-n_d*n_e*n_f*n_g+n_d*n_f*n_g+n_e*n_f*n_g-n_f*n_g)*G_cdebfg*H_afgcde+108*(n_c*n_d*n_e*n_f+n_c*n_d*n_e*n_g-n_c*n_d*n_e+n_c*n_d*n_f*n_g-n_c*n_d*n_f-n_c*n_d*n_g+n_c*n_d-n_c*n_e*n_f*n_g-n_d*n_e*n_f*n_g+n_e*n_f*n_g)*G_acdefg*H_efgbcd);
+ 
+# lambda_2B
+R1_ab = 1/1296*sum_cdefghijk(27*(12*(n_g*n_h-n_g*n_i-n_h*n_i+n_i)*G_aghbei*H_cdifgh+6*(n_g*n_h-n_g*n_i-n_h*n_i+n_i)*G_aghefi*H_cdibgh-24*(n_g*n_h-n_g*n_i-n_h*n_i+n_i)*G_cghbei*H_adifgh-12*(n_g*n_h-n_g*n_i-n_h*n_i+n_i)*G_cghefi*H_adibgh+12*(n_g*n_h+n_g*n_i-n_g-n_h*n_i)*G_acgbhi*H_dhiefg-24*(n_g*n_h+n_g*n_i-n_g-n_h*n_i)*G_acgehi*H_dhibfg+6*(n_g*n_h+n_g*n_i-n_g-n_h*n_i)*G_cdgbhi*H_ahiefg-12*(n_g*n_h+n_g*n_i-n_g-n_h*n_i)*G_cdgehi*H_ahibfg+2*(n_g*n_h+n_g*n_i-n_g+n_h*n_i-n_h-n_i+1)*G_acdghi*H_ghibef-2*(n_g*n_h+n_g*n_i-n_g+n_h*n_i-n_h-n_i+1)*G_ghibef*H_acdghi+6*G_acdbik*H_ghkefj*lambda2B_ghij-12*G_acdeik*H_ghkbfj*lambda2B_ghij+3*G_acdijk*H_ghkbef*lambda2B_ghij-12*G_acgbek*H_dhkfij*lambda2B_ghij-12*G_acgbik*H_dhkefj*lambda2B_ghij-6*G_acgefk*H_dhkbij*lambda2B_ghij+24*G_acgeik*H_dhkbfj*lambda2B_ghij-6*G_acgijk*H_dhkbef*lambda2B_ghij+24*G_ackbei*H_dghfjk*lambda2B_ghij-6*G_ackbij*H_dghefk*lambda2B_ghij+12*G_ackefi*H_dghbjk*lambda2B_ghij+12*G_ackeij*H_dghbfk*lambda2B_ghij-8*G_cdgbek*H_ahkfij*lambda2B_ghij-8*G_cdgbik*H_ahkefj*lambda2B_ghij+16*G_cdgeik*H_ahkbfj*lambda2B_ghij-4*G_cdgijk*H_ahkbef*lambda2B_ghij+12*G_cdkbei*H_aghfjk*lambda2B_ghij-3*G_cdkbij*H_aghefk*lambda2B_ghij+6*G_cdkeij*H_aghbfk*lambda2B_ghij-4*G_cghbek*H_adkfij*lambda2B_ghij-4*G_cghbik*H_adkefj*lambda2B_ghij-2*G_cghefk*H_adkbij*lambda2B_ghij+8*G_cgheik*H_adkbfj*lambda2B_ghij+6*G_cgkbef*H_adhijk*lambda2B_ghij-24*G_cgkbei*H_adhfjk*lambda2B_ghij+6*G_cgkbij*H_adhefk*lambda2B_ghij-12*G_cgkefi*H_adhbjk*lambda2B_ghij-12*G_cgkeij*H_adhbfk*lambda2B_ghij)*lambda2B_cdef);
+ 
+# lambda_3B
+R1_ab = 1/1296*sum_cdefghij(18*(18*(n_i-n_j)*G_acibfj*H_dejghi+18*(n_i-n_j)*G_acifgj*H_dejbhi+18*(n_i-n_j)*G_cdibfj*H_aejghi+18*(n_i-n_j)*G_cdifgj*H_aejbhi-3*(n_i+n_j-1)*G_acdbij*H_eijfgh+9*(n_i+n_j-1)*G_acdfij*H_eijbgh+3*(n_i+n_j-1)*G_aijbfg*H_cdehij-(n_i+n_j-1)*G_aijfgh*H_cdebij+(n_i+n_j-1)*G_cdebij*H_aijfgh-3*(n_i+n_j-1)*G_cdefij*H_aijbgh-9*(n_i+n_j-1)*G_cijbfg*H_adehij+3*(n_i+n_j-1)*G_cijfgh*H_adebij)*lambda3B_cdefgh);
+ 
+# lambda_4B
+R1_ab = 1/1296*sum_cdefghijk(9*(6*G_acdbgk*H_efkhij+9*G_acdghk*H_efkbij-6*G_ackbgh*H_defijk+4*G_ackghi*H_defbjk-4*G_cdebgk*H_afkhij-6*G_cdeghk*H_afkbij-9*G_cdkbgh*H_aefijk+6*G_cdkghi*H_aefbjk)*lambda4B_cdefghij);
+ 
+# commutator [3B,3B]-2B 
+# lambda_1B
+R2_abcd = 1/324*sum_efgh(-324*(n_e*n_f*n_g+n_e*n_f*n_h-n_e*n_f-n_e*n_g*n_h-n_f*n_g*n_h+n_g*n_h)*G_aefcgh*H_bghdef+54*(n_e*n_f*n_g-n_e*n_f*n_h-n_e*n_g*n_h+n_e*n_h-n_f*n_g*n_h+n_f*n_h+n_g*n_h-n_h)*G_efgcdh*H_abhefg+54*(n_e*n_f*n_g+n_e*n_f*n_h-n_e*n_f+n_e*n_g*n_h-n_e*n_g-n_e*n_h+n_e-n_f*n_g*n_h)*G_abefgh*H_fghcde);
+ 
+# lambda_2B
+R2_abcd = 1/324*sum_efghij(81*(-4*(n_i-n_j)*G_abicgj*H_efjdhi+(n_i-n_j)*G_abighj*H_efjcdi-4*(n_i-n_j)*G_aeicdj*H_bfjghi+16*(n_i-n_j)*G_aeicgj*H_bfjdhi-4*(n_i-n_j)*G_aeighj*H_bfjcdi+(n_i-n_j)*G_eficdj*H_abjghi-4*(n_i-n_j)*G_eficgj*H_abjdhi-2*(n_i+n_j-1)*G_abecij*H_fijdgh-2*(n_i+n_j-1)*G_abegij*H_fijcdh-2*(n_i+n_j-1)*G_aefcij*H_bijdgh-2*(n_i+n_j-1)*G_aefgij*H_bijcdh+2*(n_i+n_j-1)*G_aijcdg*H_befhij+2*(n_i+n_j-1)*G_aijcgh*H_befdij+2*(n_i+n_j-1)*G_eijcdg*H_abfhij+2*(n_i+n_j-1)*G_eijcgh*H_abfdij)*lambda2B_efgh);
+ 
+# lambda_3B
+R2_abcd = 1/324*sum_efghijk(9*(3*G_abecdk*H_fgkhij-18*G_abechk*H_fgkdij+9*G_abehik*H_fgkcdj-3*G_abkcdh*H_efgijk-6*G_abkchi*H_efgdjk-G_abkhij*H_efgcdk+6*G_aefcdk*H_bgkhij-36*G_aefchk*H_bgkdij+18*G_aefhik*H_bgkcdj+18*G_aekcdh*H_bfgijk+36*G_aekchi*H_bfgdjk+6*G_aekhij*H_bfgcdk+G_efgcdk*H_abkhij-6*G_efgchk*H_abkdij+3*G_efghik*H_abkcdj-9*G_efkcdh*H_abgijk-18*G_efkchi*H_abgdjk-3*G_efkhij*H_abgcdk)*lambda3B_efghij);
+ 
+# commutator [3B,3B]-3B 
+# lambda_1B
+R3_abcdef = 1/36*sum_ghi(162*(n_g*n_h-n_g*n_i-n_h*n_i+n_i)*G_aghdei*H_bcifgh+162*(n_g*n_h+n_g*n_i-n_g-n_h*n_i)*G_abgdhi*H_chiefg+6*(n_g*n_h+n_g*n_i-n_g+n_h*n_i-n_h-n_i+1)*G_abcghi*H_ghidef-6*(n_g*n_h+n_g*n_i-n_g+n_h*n_i-n_h-n_i+1)*G_ghidef*H_abcghi);
+ 
+# lambda_2B
+R3_abcdef = 1/36*sum_ghijk(9*(6*G_abcdik*H_ghkefj+G_abcijk*H_ghkdef-18*G_abgdek*H_chkfij-36*G_abgdik*H_chkefj-6*G_abgijk*H_chkdef+18*G_abkdei*H_cghfjk-9*G_abkdij*H_cghefk+9*G_aghdek*H_bckfij+18*G_aghdik*H_bckefj-6*G_agkdef*H_bchijk+36*G_agkdei*H_bchfjk-18*G_agkdij*H_bchefk-G_ghkdef*H_abcijk+6*G_ghkdei*H_abcfjk)*lambda2B_ghij);
+ 
+# commutator [3B,3B]-4B 
+# lambda_1B
+R4_abcdefgh = 4/9*sum_ij(81*(n_i-n_j)*G_abiefj*H_cdjghi-18*(n_i+n_j-1)*G_abceij*H_dijfgh+18*(n_i+n_j-1)*G_aijefg*H_bcdhij);
+ 
+# commutator [3B,3B]-5B 
+# lambda_1B
+R5_abcdefghij = 100/9*sum_k(9*G_abcfgk*H_dekhij-9*G_abkfgh*H_cdeijk);
+ 

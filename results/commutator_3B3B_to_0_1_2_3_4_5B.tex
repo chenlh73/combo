@@ -1,0 +1,82 @@
+
+    \documentclass{scrartcl}
+
+    \usepackage{expl3}
+    \usepackage{xparse}
+    \usepackage{amsmath}
+    \usepackage{breqn}
+
+
+    \begin{document}
+    
+\section{Equation [3B,3B]-0B}
+\subsection{$\lambda^{1B}$}
+\begin{dmath*}
+R^{}_{} = \sum_{abcdef} (n^{}_{a} \* n^{}_{b} \* n^{}_{c} \* n^{}_{d} \* n^{}_{e}+n^{}_{a} \* n^{}_{b} \* n^{}_{c} \* n^{}_{d} \* n^{}_{f}-n^{}_{a} \* n^{}_{b} \* n^{}_{c} \* n^{}_{d}+n^{}_{a} \* n^{}_{b} \* n^{}_{c} \* n^{}_{e} \* n^{}_{f}-n^{}_{a} \* n^{}_{b} \* n^{}_{c} \* n^{}_{e}-n^{}_{a} \* n^{}_{b} \* n^{}_{c} \* n^{}_{f}+n^{}_{a} \* n^{}_{b} \* n^{}_{c}-n^{}_{a} \* n^{}_{b} \* n^{}_{d} \* n^{}_{e} \* n^{}_{f}-n^{}_{a} \* n^{}_{c} \* n^{}_{d} \* n^{}_{e} \* n^{}_{f}+n^{}_{a} \* n^{}_{d} \* n^{}_{e} \* n^{}_{f}-n^{}_{b} \* n^{}_{c} \* n^{}_{d} \* n^{}_{e} \* n^{}_{f}+n^{}_{b} \* n^{}_{d} \* n^{}_{e} \* n^{}_{f}+n^{}_{c} \* n^{}_{d} \* n^{}_{e} \* n^{}_{f}-n^{}_{d} \* n^{}_{e} \* n^{}_{f}) \* G^{abc}_{def} \* H^{def}_{abc}/36
+\end{dmath*}
+\subsection{$\lambda^{2B}$}
+\begin{dmath*}
+R^{}_{} = \sum_{abcdefghijk} (-36 \* (n^{}_{i}-n^{}_{j}) \* G^{abi}_{cgj} \* H^{efj}_{dhi} \* \lambda^{ef}_{gh}+9 \* (n^{}_{i}-n^{}_{j}) \* G^{abi}_{ghj} \* H^{efj}_{cdi} \* \lambda^{ef}_{gh}-18 \* (n^{}_{i}-n^{}_{j}) \* G^{aei}_{cdj} \* H^{bfj}_{ghi} \* \lambda^{ef}_{gh}+72 \* (n^{}_{i}-n^{}_{j}) \* G^{aei}_{cgj} \* H^{bfj}_{dhi} \* \lambda^{ef}_{gh}-18 \* (n^{}_{i}-n^{}_{j}) \* G^{aei}_{ghj} \* H^{bfj}_{cdi} \* \lambda^{ef}_{gh}-12 \* (n^{}_{i}+n^{}_{j}-1) \* G^{abe}_{cij} \* H^{fij}_{dgh} \* \lambda^{ef}_{gh}-12 \* (n^{}_{i}+n^{}_{j}-1) \* G^{abe}_{gij} \* H^{fij}_{cdh} \* \lambda^{ef}_{gh}-6 \* (n^{}_{i}+n^{}_{j}-1) \* G^{aef}_{cij} \* H^{bij}_{dgh} \* \lambda^{ef}_{gh}-6 \* (n^{}_{i}+n^{}_{j}-1) \* G^{aef}_{gij} \* H^{bij}_{cdh} \* \lambda^{ef}_{gh}+18 \* (n^{}_{i}+n^{}_{j}-1) \* G^{aij}_{cdg} \* H^{bef}_{hij} \* \lambda^{ef}_{gh}+18 \* (n^{}_{i}+n^{}_{j}-1) \* G^{aij}_{cgh} \* H^{bef}_{dij} \* \lambda^{ef}_{gh}-36 \* (n^{}_{e} \* n^{}_{f} \* n^{}_{g}+n^{}_{e} \* n^{}_{f} \* n^{}_{h}-n^{}_{e} \* n^{}_{f}-n^{}_{e} \* n^{}_{g} \* n^{}_{h}-n^{}_{f} \* n^{}_{g} \* n^{}_{h}+n^{}_{g} \* n^{}_{h}) \* G^{aef}_{cgh} \* H^{bgh}_{def}+6 \* (n^{}_{e} \* n^{}_{f} \* n^{}_{g}-n^{}_{e} \* n^{}_{f} \* n^{}_{h}-n^{}_{e} \* n^{}_{g} \* n^{}_{h}+n^{}_{e} \* n^{}_{h}-n^{}_{f} \* n^{}_{g} \* n^{}_{h}+n^{}_{f} \* n^{}_{h}+n^{}_{g} \* n^{}_{h}-n^{}_{h}) \* G^{efg}_{cdh} \* H^{abh}_{efg}+6 \* (n^{}_{e} \* n^{}_{f} \* n^{}_{g}+n^{}_{e} \* n^{}_{f} \* n^{}_{h}-n^{}_{e} \* n^{}_{f}+n^{}_{e} \* n^{}_{g} \* n^{}_{h}-n^{}_{e} \* n^{}_{g}-n^{}_{e} \* n^{}_{h}+n^{}_{e}-n^{}_{f} \* n^{}_{g} \* n^{}_{h}) \* G^{abe}_{fgh} \* H^{fgh}_{cde}-18 \* G^{abe}_{chk} \* H^{fgk}_{dij} \* \lambda^{efg}_{hij}+9 \* G^{abe}_{hik} \* H^{fgk}_{cdj} \* \lambda^{efg}_{hij}-6 \* G^{abk}_{chi} \* H^{efg}_{djk} \* \lambda^{efg}_{hij}-G^{abk}_{hij} \* H^{efg}_{cdk} \* \lambda^{efg}_{hij}+6 \* G^{aef}_{cdk} \* H^{bgk}_{hij} \* \lambda^{efg}_{hij}-36 \* G^{aef}_{chk} \* H^{bgk}_{dij} \* \lambda^{efg}_{hij}+18 \* G^{aef}_{hik} \* H^{bgk}_{cdj} \* \lambda^{efg}_{hij}+18 \* G^{aek}_{cdh} \* H^{bfg}_{ijk} \* \lambda^{efg}_{hij}+36 \* G^{aek}_{chi} \* H^{bfg}_{djk} \* \lambda^{efg}_{hij}+6 \* G^{aek}_{hij} \* H^{bfg}_{cdk} \* \lambda^{efg}_{hij}+G^{efg}_{cdk} \* H^{abk}_{hij} \* \lambda^{efg}_{hij}-6 \* G^{efg}_{chk} \* H^{abk}_{dij} \* \lambda^{efg}_{hij}-9 \* G^{efk}_{cdh} \* H^{abg}_{ijk} \* \lambda^{efg}_{hij}-18 \* G^{efk}_{chi} \* H^{abg}_{djk} \* \lambda^{efg}_{hij}) \* \lambda^{ab}_{cd}/144
+\end{dmath*}
+\subsection{$\lambda^{3B}$}
+\begin{dmath*}
+R^{}_{} = \sum_{abcdefghi} (27 \* (n^{}_{g} \* n^{}_{h}-n^{}_{g} \* n^{}_{i}-n^{}_{h} \* n^{}_{i}+n^{}_{i}) \* G^{agh}_{dei} \* H^{bci}_{fgh}+27 \* (n^{}_{g} \* n^{}_{h}+n^{}_{g} \* n^{}_{i}-n^{}_{g}-n^{}_{h} \* n^{}_{i}) \* G^{abg}_{dhi} \* H^{chi}_{efg}+(n^{}_{g} \* n^{}_{h}+n^{}_{g} \* n^{}_{i}-n^{}_{g}+n^{}_{h} \* n^{}_{i}-n^{}_{h}-n^{}_{i}+1) \* G^{abc}_{ghi} \* H^{ghi}_{def}-(n^{}_{g} \* n^{}_{h}+n^{}_{g} \* n^{}_{i}-n^{}_{g}+n^{}_{h} \* n^{}_{i}-n^{}_{h}-n^{}_{i}+1) \* G^{ghi}_{def} \* H^{abc}_{ghi}) \* \lambda^{abc}_{def}/216
+\end{dmath*}
+\subsection{$\lambda^{4B}$}
+\begin{dmath*}
+R^{}_{} = \sum_{abcdefghij} (9 \* (n^{}_{i}-n^{}_{j}) \* G^{abi}_{efj} \* H^{cdj}_{ghi}-2 \* (n^{}_{i}+n^{}_{j}-1) \* G^{abc}_{eij} \* H^{dij}_{fgh}+2 \* (n^{}_{i}+n^{}_{j}-1) \* G^{aij}_{efg} \* H^{bcd}_{hij}) \* \lambda^{abcd}_{efgh}/144
+\end{dmath*}
+\subsection{$\lambda^{5B}$}
+\begin{dmath*}
+R^{}_{} = \sum_{abcdefghijk} (G^{abc}_{fgk} \* H^{dek}_{hij}-G^{abk}_{fgh} \* H^{cde}_{ijk}) \* \lambda^{abcde}_{fghij}/144
+\end{dmath*}
+\section{Equation [3B,3B]-1B}
+\subsection{$\lambda^{1B}$}
+\begin{dmath*}
+R^{a}_{b} = \sum_{cdefg} (n^{}_{c} \* n^{}_{d} \* n^{}_{e} \* n^{}_{f}+n^{}_{c} \* n^{}_{d} \* n^{}_{e} \* n^{}_{g}-n^{}_{c} \* n^{}_{d} \* n^{}_{e}-n^{}_{c} \* n^{}_{d} \* n^{}_{f} \* n^{}_{g}-n^{}_{c} \* n^{}_{e} \* n^{}_{f} \* n^{}_{g}+n^{}_{c} \* n^{}_{f} \* n^{}_{g}-n^{}_{d} \* n^{}_{e} \* n^{}_{f} \* n^{}_{g}+n^{}_{d} \* n^{}_{f} \* n^{}_{g}+n^{}_{e} \* n^{}_{f} \* n^{}_{g}-n^{}_{f} \* n^{}_{g}) \* G^{cde}_{bfg} \* H^{afg}_{cde}/12+(n^{}_{c} \* n^{}_{d} \* n^{}_{e} \* n^{}_{f}+n^{}_{c} \* n^{}_{d} \* n^{}_{e} \* n^{}_{g}-n^{}_{c} \* n^{}_{d} \* n^{}_{e}+n^{}_{c} \* n^{}_{d} \* n^{}_{f} \* n^{}_{g}-n^{}_{c} \* n^{}_{d} \* n^{}_{f}-n^{}_{c} \* n^{}_{d} \* n^{}_{g}+n^{}_{c} \* n^{}_{d}-n^{}_{c} \* n^{}_{e} \* n^{}_{f} \* n^{}_{g}-n^{}_{d} \* n^{}_{e} \* n^{}_{f} \* n^{}_{g}+n^{}_{e} \* n^{}_{f} \* n^{}_{g}) \* G^{acd}_{efg} \* H^{efg}_{bcd}/12
+\end{dmath*}
+\subsection{$\lambda^{2B}$}
+\begin{dmath*}
+R^{a}_{b} = \sum_{cdefghijk} (12 \* (n^{}_{g} \* n^{}_{h}-n^{}_{g} \* n^{}_{i}-n^{}_{h} \* n^{}_{i}+n^{}_{i}) \* G^{agh}_{bei} \* H^{cdi}_{fgh}+6 \* (n^{}_{g} \* n^{}_{h}-n^{}_{g} \* n^{}_{i}-n^{}_{h} \* n^{}_{i}+n^{}_{i}) \* G^{agh}_{efi} \* H^{cdi}_{bgh}-24 \* (n^{}_{g} \* n^{}_{h}-n^{}_{g} \* n^{}_{i}-n^{}_{h} \* n^{}_{i}+n^{}_{i}) \* G^{cgh}_{bei} \* H^{adi}_{fgh}-12 \* (n^{}_{g} \* n^{}_{h}-n^{}_{g} \* n^{}_{i}-n^{}_{h} \* n^{}_{i}+n^{}_{i}) \* G^{cgh}_{efi} \* H^{adi}_{bgh}+12 \* (n^{}_{g} \* n^{}_{h}+n^{}_{g} \* n^{}_{i}-n^{}_{g}-n^{}_{h} \* n^{}_{i}) \* G^{acg}_{bhi} \* H^{dhi}_{efg}-24 \* (n^{}_{g} \* n^{}_{h}+n^{}_{g} \* n^{}_{i}-n^{}_{g}-n^{}_{h} \* n^{}_{i}) \* G^{acg}_{ehi} \* H^{dhi}_{bfg}+6 \* (n^{}_{g} \* n^{}_{h}+n^{}_{g} \* n^{}_{i}-n^{}_{g}-n^{}_{h} \* n^{}_{i}) \* G^{cdg}_{bhi} \* H^{ahi}_{efg}-12 \* (n^{}_{g} \* n^{}_{h}+n^{}_{g} \* n^{}_{i}-n^{}_{g}-n^{}_{h} \* n^{}_{i}) \* G^{cdg}_{ehi} \* H^{ahi}_{bfg}+2 \* (n^{}_{g} \* n^{}_{h}+n^{}_{g} \* n^{}_{i}-n^{}_{g}+n^{}_{h} \* n^{}_{i}-n^{}_{h}-n^{}_{i}+1) \* G^{acd}_{ghi} \* H^{ghi}_{bef}-2 \* (n^{}_{g} \* n^{}_{h}+n^{}_{g} \* n^{}_{i}-n^{}_{g}+n^{}_{h} \* n^{}_{i}-n^{}_{h}-n^{}_{i}+1) \* G^{ghi}_{bef} \* H^{acd}_{ghi}+6 \* G^{acd}_{bik} \* H^{ghk}_{efj} \* \lambda^{gh}_{ij}-12 \* G^{acd}_{eik} \* H^{ghk}_{bfj} \* \lambda^{gh}_{ij}+3 \* G^{acd}_{ijk} \* H^{ghk}_{bef} \* \lambda^{gh}_{ij}-12 \* G^{acg}_{bek} \* H^{dhk}_{fij} \* \lambda^{gh}_{ij}-12 \* G^{acg}_{bik} \* H^{dhk}_{efj} \* \lambda^{gh}_{ij}-6 \* G^{acg}_{efk} \* H^{dhk}_{bij} \* \lambda^{gh}_{ij}+24 \* G^{acg}_{eik} \* H^{dhk}_{bfj} \* \lambda^{gh}_{ij}-6 \* G^{acg}_{ijk} \* H^{dhk}_{bef} \* \lambda^{gh}_{ij}+24 \* G^{ack}_{bei} \* H^{dgh}_{fjk} \* \lambda^{gh}_{ij}-6 \* G^{ack}_{bij} \* H^{dgh}_{efk} \* \lambda^{gh}_{ij}+12 \* G^{ack}_{efi} \* H^{dgh}_{bjk} \* \lambda^{gh}_{ij}+12 \* G^{ack}_{eij} \* H^{dgh}_{bfk} \* \lambda^{gh}_{ij}-8 \* G^{cdg}_{bek} \* H^{ahk}_{fij} \* \lambda^{gh}_{ij}-8 \* G^{cdg}_{bik} \* H^{ahk}_{efj} \* \lambda^{gh}_{ij}+16 \* G^{cdg}_{eik} \* H^{ahk}_{bfj} \* \lambda^{gh}_{ij}-4 \* G^{cdg}_{ijk} \* H^{ahk}_{bef} \* \lambda^{gh}_{ij}+12 \* G^{cdk}_{bei} \* H^{agh}_{fjk} \* \lambda^{gh}_{ij}-3 \* G^{cdk}_{bij} \* H^{agh}_{efk} \* \lambda^{gh}_{ij}+6 \* G^{cdk}_{eij} \* H^{agh}_{bfk} \* \lambda^{gh}_{ij}-4 \* G^{cgh}_{bek} \* H^{adk}_{fij} \* \lambda^{gh}_{ij}-4 \* G^{cgh}_{bik} \* H^{adk}_{efj} \* \lambda^{gh}_{ij}-2 \* G^{cgh}_{efk} \* H^{adk}_{bij} \* \lambda^{gh}_{ij}+8 \* G^{cgh}_{eik} \* H^{adk}_{bfj} \* \lambda^{gh}_{ij}+6 \* G^{cgk}_{bef} \* H^{adh}_{ijk} \* \lambda^{gh}_{ij}-24 \* G^{cgk}_{bei} \* H^{adh}_{fjk} \* \lambda^{gh}_{ij}+6 \* G^{cgk}_{bij} \* H^{adh}_{efk} \* \lambda^{gh}_{ij}-12 \* G^{cgk}_{efi} \* H^{adh}_{bjk} \* \lambda^{gh}_{ij}-12 \* G^{cgk}_{eij} \* H^{adh}_{bfk} \* \lambda^{gh}_{ij}) \* \lambda^{cd}_{ef}/48
+\end{dmath*}
+\subsection{$\lambda^{3B}$}
+\begin{dmath*}
+R^{a}_{b} = \sum_{cdefghij} (18 \* (n^{}_{i}-n^{}_{j}) \* G^{aci}_{bfj} \* H^{dej}_{ghi}+18 \* (n^{}_{i}-n^{}_{j}) \* G^{aci}_{fgj} \* H^{dej}_{bhi}+18 \* (n^{}_{i}-n^{}_{j}) \* G^{cdi}_{bfj} \* H^{aej}_{ghi}+18 \* (n^{}_{i}-n^{}_{j}) \* G^{cdi}_{fgj} \* H^{aej}_{bhi}-3 \* (n^{}_{i}+n^{}_{j}-1) \* G^{acd}_{bij} \* H^{eij}_{fgh}+9 \* (n^{}_{i}+n^{}_{j}-1) \* G^{acd}_{fij} \* H^{eij}_{bgh}+3 \* (n^{}_{i}+n^{}_{j}-1) \* G^{aij}_{bfg} \* H^{cde}_{hij}-(n^{}_{i}+n^{}_{j}-1) \* G^{aij}_{fgh} \* H^{cde}_{bij}+(n^{}_{i}+n^{}_{j}-1) \* G^{cde}_{bij} \* H^{aij}_{fgh}-3 \* (n^{}_{i}+n^{}_{j}-1) \* G^{cde}_{fij} \* H^{aij}_{bgh}-9 \* (n^{}_{i}+n^{}_{j}-1) \* G^{cij}_{bfg} \* H^{ade}_{hij}+3 \* (n^{}_{i}+n^{}_{j}-1) \* G^{cij}_{fgh} \* H^{ade}_{bij}) \* \lambda^{cde}_{fgh}/72
+\end{dmath*}
+\subsection{$\lambda^{4B}$}
+\begin{dmath*}
+R^{a}_{b} = \sum_{cdefghijk} (6 \* G^{acd}_{bgk} \* H^{efk}_{hij}+9 \* G^{acd}_{ghk} \* H^{efk}_{bij}-6 \* G^{ack}_{bgh} \* H^{def}_{ijk}+4 \* G^{ack}_{ghi} \* H^{def}_{bjk}-4 \* G^{cde}_{bgk} \* H^{afk}_{hij}-6 \* G^{cde}_{ghk} \* H^{afk}_{bij}-9 \* G^{cdk}_{bgh} \* H^{aef}_{ijk}+6 \* G^{cdk}_{ghi} \* H^{aef}_{bjk}) \* \lambda^{cdef}_{ghij}/144
+\end{dmath*}
+\section{Equation [3B,3B]-2B}
+\subsection{$\lambda^{1B}$}
+\begin{dmath*}
+R^{ab}_{cd} = \sum_{efgh} -(n^{}_{e} \* n^{}_{f} \* n^{}_{g}+n^{}_{e} \* n^{}_{f} \* n^{}_{h}-n^{}_{e} \* n^{}_{f}-n^{}_{e} \* n^{}_{g} \* n^{}_{h}-n^{}_{f} \* n^{}_{g} \* n^{}_{h}+n^{}_{g} \* n^{}_{h}) \* G^{aef}_{cgh} \* H^{bgh}_{def}+(n^{}_{e} \* n^{}_{f} \* n^{}_{g}-n^{}_{e} \* n^{}_{f} \* n^{}_{h}-n^{}_{e} \* n^{}_{g} \* n^{}_{h}+n^{}_{e} \* n^{}_{h}-n^{}_{f} \* n^{}_{g} \* n^{}_{h}+n^{}_{f} \* n^{}_{h}+n^{}_{g} \* n^{}_{h}-n^{}_{h}) \* G^{efg}_{cdh} \* H^{abh}_{efg}/6+(n^{}_{e} \* n^{}_{f} \* n^{}_{g}+n^{}_{e} \* n^{}_{f} \* n^{}_{h}-n^{}_{e} \* n^{}_{f}+n^{}_{e} \* n^{}_{g} \* n^{}_{h}-n^{}_{e} \* n^{}_{g}-n^{}_{e} \* n^{}_{h}+n^{}_{e}-n^{}_{f} \* n^{}_{g} \* n^{}_{h}) \* G^{abe}_{fgh} \* H^{fgh}_{cde}/6
+\end{dmath*}
+\subsection{$\lambda^{2B}$}
+\begin{dmath*}
+R^{ab}_{cd} = \sum_{efghij} (-4 \* (n^{}_{i}-n^{}_{j}) \* G^{abi}_{cgj} \* H^{efj}_{dhi}+(n^{}_{i}-n^{}_{j}) \* G^{abi}_{ghj} \* H^{efj}_{cdi}-4 \* (n^{}_{i}-n^{}_{j}) \* G^{aei}_{cdj} \* H^{bfj}_{ghi}+16 \* (n^{}_{i}-n^{}_{j}) \* G^{aei}_{cgj} \* H^{bfj}_{dhi}-4 \* (n^{}_{i}-n^{}_{j}) \* G^{aei}_{ghj} \* H^{bfj}_{cdi}+(n^{}_{i}-n^{}_{j}) \* G^{efi}_{cdj} \* H^{abj}_{ghi}-4 \* (n^{}_{i}-n^{}_{j}) \* G^{efi}_{cgj} \* H^{abj}_{dhi}-2 \* (n^{}_{i}+n^{}_{j}-1) \* G^{abe}_{cij} \* H^{fij}_{dgh}-2 \* (n^{}_{i}+n^{}_{j}-1) \* G^{abe}_{gij} \* H^{fij}_{cdh}-2 \* (n^{}_{i}+n^{}_{j}-1) \* G^{aef}_{cij} \* H^{bij}_{dgh}-2 \* (n^{}_{i}+n^{}_{j}-1) \* G^{aef}_{gij} \* H^{bij}_{cdh}+2 \* (n^{}_{i}+n^{}_{j}-1) \* G^{aij}_{cdg} \* H^{bef}_{hij}+2 \* (n^{}_{i}+n^{}_{j}-1) \* G^{aij}_{cgh} \* H^{bef}_{dij}+2 \* (n^{}_{i}+n^{}_{j}-1) \* G^{eij}_{cdg} \* H^{abf}_{hij}+2 \* (n^{}_{i}+n^{}_{j}-1) \* G^{eij}_{cgh} \* H^{abf}_{dij}) \* \lambda^{ef}_{gh}/4
+\end{dmath*}
+\subsection{$\lambda^{3B}$}
+\begin{dmath*}
+R^{ab}_{cd} = \sum_{efghijk} (3 \* G^{abe}_{cdk} \* H^{fgk}_{hij}-18 \* G^{abe}_{chk} \* H^{fgk}_{dij}+9 \* G^{abe}_{hik} \* H^{fgk}_{cdj}-3 \* G^{abk}_{cdh} \* H^{efg}_{ijk}-6 \* G^{abk}_{chi} \* H^{efg}_{djk}-G^{abk}_{hij} \* H^{efg}_{cdk}+6 \* G^{aef}_{cdk} \* H^{bgk}_{hij}-36 \* G^{aef}_{chk} \* H^{bgk}_{dij}+18 \* G^{aef}_{hik} \* H^{bgk}_{cdj}+18 \* G^{aek}_{cdh} \* H^{bfg}_{ijk}+36 \* G^{aek}_{chi} \* H^{bfg}_{djk}+6 \* G^{aek}_{hij} \* H^{bfg}_{cdk}+G^{efg}_{cdk} \* H^{abk}_{hij}-6 \* G^{efg}_{chk} \* H^{abk}_{dij}+3 \* G^{efg}_{hik} \* H^{abk}_{cdj}-9 \* G^{efk}_{cdh} \* H^{abg}_{ijk}-18 \* G^{efk}_{chi} \* H^{abg}_{djk}-3 \* G^{efk}_{hij} \* H^{abg}_{cdk}) \* \lambda^{efg}_{hij}/36
+\end{dmath*}
+\section{Equation [3B,3B]-3B}
+\subsection{$\lambda^{1B}$}
+\begin{dmath*}
+R^{abc}_{def} = \sum_{ghi} 9 \* (n^{}_{g} \* n^{}_{h}-n^{}_{g} \* n^{}_{i}-n^{}_{h} \* n^{}_{i}+n^{}_{i}) \* G^{agh}_{dei} \* H^{bci}_{fgh}/2+9 \* (n^{}_{g} \* n^{}_{h}+n^{}_{g} \* n^{}_{i}-n^{}_{g}-n^{}_{h} \* n^{}_{i}) \* G^{abg}_{dhi} \* H^{chi}_{efg}/2+(n^{}_{g} \* n^{}_{h}+n^{}_{g} \* n^{}_{i}-n^{}_{g}+n^{}_{h} \* n^{}_{i}-n^{}_{h}-n^{}_{i}+1) \* G^{abc}_{ghi} \* H^{ghi}_{def}/6-(n^{}_{g} \* n^{}_{h}+n^{}_{g} \* n^{}_{i}-n^{}_{g}+n^{}_{h} \* n^{}_{i}-n^{}_{h}-n^{}_{i}+1) \* G^{ghi}_{def} \* H^{abc}_{ghi}/6
+\end{dmath*}
+\subsection{$\lambda^{2B}$}
+\begin{dmath*}
+R^{abc}_{def} = \sum_{ghijk} (6 \* G^{abc}_{dik} \* H^{ghk}_{efj}+G^{abc}_{ijk} \* H^{ghk}_{def}-18 \* G^{abg}_{dek} \* H^{chk}_{fij}-36 \* G^{abg}_{dik} \* H^{chk}_{efj}-6 \* G^{abg}_{ijk} \* H^{chk}_{def}+18 \* G^{abk}_{dei} \* H^{cgh}_{fjk}-9 \* G^{abk}_{dij} \* H^{cgh}_{efk}+9 \* G^{agh}_{dek} \* H^{bck}_{fij}+18 \* G^{agh}_{dik} \* H^{bck}_{efj}-6 \* G^{agk}_{def} \* H^{bch}_{ijk}+36 \* G^{agk}_{dei} \* H^{bch}_{fjk}-18 \* G^{agk}_{dij} \* H^{bch}_{efk}-G^{ghk}_{def} \* H^{abc}_{ijk}+6 \* G^{ghk}_{dei} \* H^{abc}_{fjk}) \* \lambda^{gh}_{ij}/4
+\end{dmath*}
+\section{Equation [3B,3B]-4B}
+\subsection{$\lambda^{1B}$}
+\begin{dmath*}
+R^{abcd}_{efgh} = \sum_{ij} 36 \* (n^{}_{i}-n^{}_{j}) \* G^{abi}_{efj} \* H^{cdj}_{ghi}-8 \* (n^{}_{i}+n^{}_{j}-1) \* G^{abc}_{eij} \* H^{dij}_{fgh}+8 \* (n^{}_{i}+n^{}_{j}-1) \* G^{aij}_{efg} \* H^{bcd}_{hij}
+\end{dmath*}
+\section{Equation [3B,3B]-5B}
+\subsection{$\lambda^{1B}$}
+\begin{dmath*}
+R^{abcde}_{fghij} = \sum_{k} 100 \* G^{abc}_{fgk} \* H^{dek}_{hij}-100 \* G^{abk}_{fgh} \* H^{cde}_{ijk}
+\end{dmath*}
+\end{document}

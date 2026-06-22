@@ -1,0 +1,57 @@
+
+    \documentclass{scrartcl}
+
+    \usepackage{expl3}
+    \usepackage{xparse}
+    \usepackage{amsmath}
+    \usepackage{breqn}
+
+
+    \begin{document}
+    
+\section{Equation [2B,3B]-0B}
+\subsection{$\lambda^{2B}$}
+\begin{dmath*}
+R^{}_{} = \sum_{abcdefghi} (2 \* (n^{}_{e} \* n^{}_{f}-n^{}_{e} \* n^{}_{g}-n^{}_{f} \* n^{}_{g}+n^{}_{g}) \* G^{ef}_{cg} \* H^{abg}_{def}+2 \* (n^{}_{e} \* n^{}_{f}+n^{}_{e} \* n^{}_{g}-n^{}_{e}-n^{}_{f} \* n^{}_{g}) \* G^{ae}_{fg} \* H^{bfg}_{cde}+G^{ab}_{gi} \* H^{efi}_{cdh} \* \lambda^{ef}_{gh}-2 \* G^{ae}_{ci} \* H^{bfi}_{dgh} \* \lambda^{ef}_{gh}-2 \* G^{ae}_{gi} \* H^{bfi}_{cdh} \* \lambda^{ef}_{gh}+4 \* G^{ai}_{cg} \* H^{bef}_{dhi} \* \lambda^{ef}_{gh}-G^{ai}_{gh} \* H^{bef}_{cdi} \* \lambda^{ef}_{gh}) \* \lambda^{ab}_{cd}/8
+\end{dmath*}
+\subsection{$\lambda^{3B}$}
+\begin{dmath*}
+R^{}_{} = \sum_{abcdefgh} (6 \* (n^{}_{g}-n^{}_{h}) \* G^{ag}_{dh} \* H^{bch}_{efg}-(n^{}_{g}+n^{}_{h}-1) \* G^{ab}_{gh} \* H^{cgh}_{def}+(n^{}_{g}+n^{}_{h}-1) \* G^{gh}_{de} \* H^{abc}_{fgh}) \* \lambda^{abc}_{def}/24
+\end{dmath*}
+\subsection{$\lambda^{4B}$}
+\begin{dmath*}
+R^{}_{} = \sum_{abcdefghi} (G^{ab}_{ei} \* H^{cdi}_{fgh}-G^{ai}_{ef} \* H^{bcd}_{ghi}) \* \lambda^{abcd}_{efgh}/24
+\end{dmath*}
+\section{Equation [2B,3B]-1B}
+\subsection{$\lambda^{1B}$}
+\begin{dmath*}
+R^{a}_{b} = \sum_{cdef} (-n^{}_{c} \* n^{}_{d} \* n^{}_{e}-n^{}_{c} \* n^{}_{d} \* n^{}_{f}+n^{}_{c} \* n^{}_{d}+n^{}_{c} \* n^{}_{e} \* n^{}_{f}+n^{}_{d} \* n^{}_{e} \* n^{}_{f}-n^{}_{e} \* n^{}_{f}) \* G^{cd}_{ef} \* H^{aef}_{bcd}/4
+\end{dmath*}
+\subsection{$\lambda^{2B}$}
+\begin{dmath*}
+R^{a}_{b} = \sum_{cdefgh} (-4 \* (n^{}_{g}-n^{}_{h}) \* G^{ag}_{eh} \* H^{cdh}_{bfg}-4 \* (n^{}_{g}-n^{}_{h}) \* G^{cg}_{bh} \* H^{adh}_{efg}+8 \* (n^{}_{g}-n^{}_{h}) \* G^{cg}_{eh} \* H^{adh}_{bfg}-2 \* (n^{}_{g}+n^{}_{h}-1) \* G^{ac}_{gh} \* H^{dgh}_{bef}-(n^{}_{g}+n^{}_{h}-1) \* G^{cd}_{gh} \* H^{agh}_{bef}+2 \* (n^{}_{g}+n^{}_{h}-1) \* G^{gh}_{be} \* H^{acd}_{fgh}+(n^{}_{g}+n^{}_{h}-1) \* G^{gh}_{ef} \* H^{acd}_{bgh}) \* \lambda^{cd}_{ef}/8
+\end{dmath*}
+\subsection{$\lambda^{3B}$}
+\begin{dmath*}
+R^{a}_{b} = \sum_{cdefghi} (G^{ac}_{bi} \* H^{dei}_{fgh}-3 \* G^{ac}_{fi} \* H^{dei}_{bgh}-G^{ai}_{bf} \* H^{cde}_{ghi}-G^{ai}_{fg} \* H^{cde}_{bhi}+G^{cd}_{bi} \* H^{aei}_{fgh}-3 \* G^{cd}_{fi} \* H^{aei}_{bgh}+3 \* G^{ci}_{bf} \* H^{ade}_{ghi}+3 \* G^{ci}_{fg} \* H^{ade}_{bhi}) \* \lambda^{cde}_{fgh}/12
+\end{dmath*}
+\section{Equation [2B,3B]-2B}
+\subsection{$\lambda^{1B}$}
+\begin{dmath*}
+R^{ab}_{cd} = \sum_{efg} (n^{}_{e} \* n^{}_{f}-n^{}_{e} \* n^{}_{g}-n^{}_{f} \* n^{}_{g}+n^{}_{g}) \* G^{ef}_{cg} \* H^{abg}_{def}+(n^{}_{e} \* n^{}_{f}+n^{}_{e} \* n^{}_{g}-n^{}_{e}-n^{}_{f} \* n^{}_{g}) \* G^{ae}_{fg} \* H^{bfg}_{cde}
+\end{dmath*}
+\subsection{$\lambda^{2B}$}
+\begin{dmath*}
+R^{ab}_{cd} = \sum_{efghi} (G^{ab}_{gi} \* H^{efi}_{cdh}-4 \* G^{ae}_{ci} \* H^{bfi}_{dgh}-4 \* G^{ae}_{gi} \* H^{bfi}_{cdh}+4 \* G^{ai}_{cg} \* H^{bef}_{dhi}-G^{ai}_{gh} \* H^{bef}_{cdi}+G^{ef}_{ci} \* H^{abi}_{dgh}+G^{ef}_{gi} \* H^{abi}_{cdh}-G^{ei}_{cd} \* H^{abf}_{ghi}+4 \* G^{ei}_{cg} \* H^{abf}_{dhi}-G^{ei}_{gh} \* H^{abf}_{cdi}) \* \lambda^{ef}_{gh}/2
+\end{dmath*}
+\section{Equation [2B,3B]-3B}
+\subsection{$\lambda^{1B}$}
+\begin{dmath*}
+R^{abc}_{def} = \sum_{gh} 9 \* (n^{}_{g}-n^{}_{h}) \* G^{ag}_{dh} \* H^{bch}_{efg}-3 \* (n^{}_{g}+n^{}_{h}-1) \* G^{ab}_{gh} \* H^{cgh}_{def}/2+3 \* (n^{}_{g}+n^{}_{h}-1) \* G^{gh}_{de} \* H^{abc}_{fgh}/2
+\end{dmath*}
+\section{Equation [2B,3B]-4B}
+\subsection{$\lambda^{1B}$}
+\begin{dmath*}
+R^{abcd}_{efgh} = \sum_{i} 24 \* G^{ab}_{ei} \* H^{cdi}_{fgh}-24 \* G^{ai}_{ef} \* H^{bcd}_{ghi}
+\end{dmath*}
+\end{document}

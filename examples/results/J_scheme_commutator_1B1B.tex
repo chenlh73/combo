@@ -1,0 +1,53 @@
+
+\documentclass{scrartcl}
+
+\usepackage{expl3}
+\usepackage{xparse}
+\usepackage{amsmath}
+\usepackage{breqn}
+
+\newcommand{\threej}[3]{\begingroup\setlength{\arraycolsep}{0.2em}\begin{Bmatrix} #1 & #2 & #3 \end{Bmatrix}\endgroup}
+\newcommand{\sixj}[6]{\begingroup\setlength{\arraycolsep}{0.2em}\begin{Bmatrix} #1 & #2 & #3 \\ #4 & #5 & #6 \end{Bmatrix}\endgroup}
+\newcommand{\ninej}[9]{\begingroup\setlength{\arraycolsep}{0.2em}\begin{Bmatrix} #1 & #2 & #3 \\ #4 & #5 & #6 \\ #7 & #8 & #9 \end{Bmatrix}\endgroup}
+
+\ExplSyntaxOn
+\tl_new:N \l__hatfact_tl
+
+\NewDocumentCommand{\hatfact} {m} { \__hatfact_parse:n #1 }
+
+\cs_new:Nn \__hatfact_parse:n { \tl_set:Nn \l__hatfact_main_tl {#1} \__hatfact_hat: }
+
+\cs_generate_variant:Nn \str_set:Nn {Nx}
+\cs_new:Nn \__hatfact_hat:
+  {
+    \str_set:Nx \l_tmpa_str {\l__hatfact_main_tl}
+    \str_set:Nn \l_tmpb_str {j}
+    \str_if_eq:NNTF \l_tmpa_str \l_tmpb_str {
+      \hat{\jmath}
+    } {
+      \hat \l__hatfact_main_tl
+    }
+  }
+\ExplSyntaxOff
+
+\begin{document}
+
+\section{Equation 1}
+\begin{dmath*}
+R = \sum_{a b} \* \delta_{{j}_{b},{j}_{a}} \* (n_{a} -n_{b}) \* \hatfact{{j}_{a}^{2}} \* G_{a b}^{0} \* H_{b a}^{0}
+\end{dmath*}
+
+\section{Equation 2}
+\begin{dmath*}
+R_{a b}^{0} = 
+\end{dmath*}
+\subsection{Term 1}
+\begin{dmath*}
+\delta_{{j}_{b},{j}_{a}} \* \sum_{c} \* \delta_{{j}_{c},{j}_{a}} \* G_{a c}^{0} \* H_{c b}^{0}
+\end{dmath*}
+\subsection{Term 2}
+\begin{dmath*}
+-\delta_{{j}_{b},{j}_{a}} \* \sum_{c} \* \delta_{{j}_{c},{j}_{a}} \* G_{c b}^{0} \* H_{a c}^{0}
+\end{dmath*}
+
+\end{document}

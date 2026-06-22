@@ -1,0 +1,47 @@
+declare G{mode= (2,2),latex ="G" } 
+declare H{mode= (3,3),latex ="H" } 
+declare R0{mode= (0,0),latex ="R" } 
+declare R1{mode= (1,1),latex ="R" } 
+declare R2{mode= (2,2),latex ="R" } 
+declare R3{mode= (3,3),latex ="R" } 
+declare R4{mode= (4,4),latex ="R" } 
+declare lambda2B{mode= (2,2),latex ="\lambda" } 
+declare lambda3B{mode= (3,3),latex ="\lambda" } 
+declare lambda4B{mode= (4,4),latex ="\lambda" } 
+declare n {  mode=2, diagonal=true, latex="n"} 
+ 
+# commutator [2B,3B]-0B 
+# lambda_2B
+R0 = 1/144*sum_abcdefghi(18*(2*(n_e*n_f-n_e*n_g-n_f*n_g+n_g)*G_efcg*H_abgdef+2*(n_e*n_f+n_e*n_g-n_e-n_f*n_g)*G_aefg*H_bfgcde+G_abgi*H_eficdh*lambda2B_efgh-2*G_aeci*H_bfidgh*lambda2B_efgh-2*G_aegi*H_bficdh*lambda2B_efgh+4*G_aicg*H_befdhi*lambda2B_efgh-G_aigh*H_befcdi*lambda2B_efgh)*lambda2B_abcd);
+ 
+# lambda_3B
+R0 = 1/144*sum_abcdefgh(6*(6*(n_g-n_h)*G_agdh*H_bchefg-(n_g+n_h-1)*G_abgh*H_cghdef+(n_g+n_h-1)*G_ghde*H_abcfgh)*lambda3B_abcdef);
+ 
+# lambda_4B
+R0 = 1/144*sum_abcdefghi(6*(G_abei*H_cdifgh-G_aief*H_bcdghi)*lambda4B_abcdefgh);
+ 
+# commutator [2B,3B]-1B 
+# lambda_1B
+R1_ab = 1/144*sum_cdef(36*(-n_c*n_d*n_e-n_c*n_d*n_f+n_c*n_d+n_c*n_e*n_f+n_d*n_e*n_f-n_e*n_f)*G_cdef*H_aefbcd);
+ 
+# lambda_2B
+R1_ab = 1/144*sum_cdefgh(18*(-4*(n_g-n_h)*G_ageh*H_cdhbfg-4*(n_g-n_h)*G_cgbh*H_adhefg+8*(n_g-n_h)*G_cgeh*H_adhbfg-2*(n_g+n_h-1)*G_acgh*H_dghbef-(n_g+n_h-1)*G_cdgh*H_aghbef+2*(n_g+n_h-1)*G_ghbe*H_acdfgh+(n_g+n_h-1)*G_ghef*H_acdbgh)*lambda2B_cdef);
+ 
+# lambda_3B
+R1_ab = 1/144*sum_cdefghi(12*(G_acbi*H_deifgh-3*G_acfi*H_deibgh-G_aibf*H_cdeghi-G_aifg*H_cdebhi+G_cdbi*H_aeifgh-3*G_cdfi*H_aeibgh+3*G_cibf*H_adeghi+3*G_cifg*H_adebhi)*lambda3B_cdefgh);
+ 
+# commutator [2B,3B]-2B 
+# lambda_1B
+R2_abcd = 1/36*sum_efg(36*(n_e*n_f-n_e*n_g-n_f*n_g+n_g)*G_efcg*H_abgdef+36*(n_e*n_f+n_e*n_g-n_e-n_f*n_g)*G_aefg*H_bfgcde);
+ 
+# lambda_2B
+R2_abcd = 1/36*sum_efghi(18*(G_abgi*H_eficdh-4*G_aeci*H_bfidgh-4*G_aegi*H_bficdh+4*G_aicg*H_befdhi-G_aigh*H_befcdi+G_efci*H_abidgh+G_efgi*H_abicdh-G_eicd*H_abfghi+4*G_eicg*H_abfdhi-G_eigh*H_abfcdi)*lambda2B_efgh);
+ 
+# commutator [2B,3B]-3B 
+# lambda_1B
+R3_abcdef = 1/4*sum_gh(36*(n_g-n_h)*G_agdh*H_bchefg-6*(n_g+n_h-1)*G_abgh*H_cghdef+6*(n_g+n_h-1)*G_ghde*H_abcfgh);
+ 
+# commutator [2B,3B]-4B 
+# lambda_1B
+R4_abcdefgh = 4*sum_i(6*G_abei*H_cdifgh-6*G_aief*H_bcdghi);
+ 

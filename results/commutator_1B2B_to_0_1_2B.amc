@@ -1,0 +1,20 @@
+declare G{mode= (1,1),latex ="G" } 
+declare H{mode= (2,2),latex ="H" } 
+declare R0{mode= (0,0),latex ="R" } 
+declare R1{mode= (1,1),latex ="R" } 
+declare R2{mode= (2,2),latex ="R" } 
+declare lambda2B{mode= (2,2),latex ="\lambda" } 
+declare n {  mode=2, diagonal=true, latex="n"} 
+ 
+# commutator [1B,2B]-0B 
+# lambda_2B
+R0 = 1/4*sum_abcde(2*(-G_ae*H_becd+G_ec*H_abde)*lambda2B_abcd);
+ 
+# commutator [1B,2B]-1B 
+# lambda_1B
+R1_ab = 1/4*sum_cd(4*(n_c-n_d)*G_cd*H_adbc);
+ 
+# commutator [1B,2B]-2B 
+# lambda_1B
+R2_abcd = 1*sum_e(-2*G_ae*H_becd+2*G_ec*H_abde);
+ 

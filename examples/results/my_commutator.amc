@@ -1,0 +1,9 @@
+declare G{mode= (1,1),latex ="G" } 
+declare H{mode= (1,1),latex ="H" } 
+declare R0{mode= (0,0),latex ="R" } 
+declare n {  mode=2, diagonal=true, latex="n"} 
+ 
+# commutator [1B,1B]-0B 
+# lambda_1B
+R0 = 1*sum_ab((n_a-n_b)*G_ab*H_ba);
+ 
